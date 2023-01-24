@@ -1,0 +1,42 @@
+.btn{
+    background-color: rgb(163, 25, 191);
+    border-radius: 10px;
+    font-size: 1em;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);;
+    margin: 10px;
+}
+
+.btn:hover{
+    background-color: rgb(92, 21, 116);
+    
+}
+
+.sbarInput{
+    font-size: 1.5em;
+    color: #6d6d6d;
+    padding: 2px;
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+    
+}
+
+.sbarInput:focus{
+    border: none;
+}
+
+.sbarInput:active{
+    border: none;
+}
+
+.sbarconteiner{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding: 5px;
+    margin: 15px;
+}

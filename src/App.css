@@ -1,0 +1,22 @@
+.App {
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   justify-content: center;
+   align-items: center;
+   
+}
+
+h1{
+   color: white;
+   font-size: 3rem;
+   font-weight: bold;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.sb{
+   display: flex;
+   width: 100%;
+   justify-content: center;
+}
