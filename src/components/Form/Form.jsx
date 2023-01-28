@@ -32,10 +32,6 @@ function Form(props) {
     const handleSubmit = (e) => {
         e.preventDefault()
         props.login(userData)
-        setUserData({
-            username: '',
-            password: ''
-        })
        
     }
 

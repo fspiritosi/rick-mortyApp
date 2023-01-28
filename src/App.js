@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react'
+import { Routes, Route, Outlet, useLocation, useNavigate  } from 'react-router-dom'
 import './App.css'
 import Cards from './components/Cards/Cards.jsx'
 import About from './components/About/About.jsx'
 import Detail from './components/Details/Detail.jsx'
 import Nav from './components/NavBar/Nav'
-import Error from './components/Error'
+import Error from './components/Error/Error'
 import Form from './components/Form/Form.jsx'
-import { Routes, Route, Outlet, useLocation, useNavigate  } from 'react-router-dom'
+import Favorite from './components/Favorites/Favorites'
+
 
 function App () {
 
@@ -16,6 +18,9 @@ function App () {
   const [access, setAccess] = useState(false)
   const username = 'fspiritosi@gmail.com';
   const password = 'masha0911'
+
+
+
 
   const onSearch = (character) =>{
     fetch(`https://rickandmortyapi.com/api/character/${character}`)
@@ -62,6 +67,7 @@ function App () {
           }
         />
         <Route path='/about' element={<About/>} />
+        <Route path='/favorites' element={<Favorite/>} />
         <Route path='/detail/:detailId' element={<Detail/>} />
         <Route path='*' element={<Error/>}/>
       </Routes>     
