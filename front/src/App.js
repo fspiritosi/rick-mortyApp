@@ -23,15 +23,15 @@ function App () {
 
 
   const onSearch = (character) =>{
-    fetch(`https://rickandmortyapi.com/api/character/${character}`)
-    .then((response) => response.json())
-    .then((data) => {
-      if (data.name) {
+    fetch(`http://localhost:3001/rickandmorty/onsearch/${character}`)
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.name) {
           setCharacters((oldChars) => [...oldChars, data]);
-      } else {
-          window.alert('No hay personajes con ese ID');
-      }
-    });
+        } else {
+          window.alert("No hay personajes con ese ID");
+        }
+      });
   }
 
   const onClose = (id) => {
