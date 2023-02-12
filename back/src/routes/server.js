@@ -1,6 +1,6 @@
 const http = require('http');
-const getCharById = require("../controllers/getCharById.js");
-const getCharDetail = require('../controllers/getCharDetail.js');
+const { getCharById } = require("../controllers/getCharById.js");
+const { getCharDetail } = require('../controllers/getCharDetail.js');
 
 const PORT = 3001
 

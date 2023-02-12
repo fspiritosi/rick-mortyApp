@@ -12,14 +12,25 @@ import Favorite from './components/Favorites/Favorites'
 
 function App () {
 
-  const location = useLocation();
   const navigate = useNavigate();
-  const [characters, setCharacters] = useState([]);
-  const [access, setAccess] = useState(false)
+  const location = useLocation();
+  
   const username = 'fspiritosi@gmail.com';
-  const password = 'masha0911'
+  const password = 'masha0911';
 
+  const [characters, setCharacters] = useState([]);
+  
+  const [access, setAccess] = useState(false);
 
+  
+  function login (userData){
+    if(userData.username === username && userData.password === password){
+      setAccess(true);
+      navigate('/home')
+    }else{
+      alert('usuario o contraseña incorrecto')
+    }
+  }  
 
 
   const onSearch = (character) =>{
@@ -38,14 +49,6 @@ function App () {
     setCharacters(characters.filter(char => char.id !== id))
   }
 
-  function login (userData){
-    if(userData.username === username && userData.password === password){
-      setAccess(true);
-      navigate('/home')
-    }else{
-      alert('usuario o contraseña incorrecto')
-    }
-  }  
 
 
   useEffect(() => {

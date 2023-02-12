@@ -27,7 +27,7 @@ function Detail() {
 
   return (
     <div>
-       <NavLink to='/' className={styles.btn} type='submit'>To Home</NavLink>
+       <NavLink to='/home' className={styles.btn} type='submit'>To Home</NavLink>
             <h1>{character.name}</h1>
             <h2>Gender: <span>{character.gender}</span></h2>
             <h2>Origin: <span>{character.origin?.name}</span></h2>

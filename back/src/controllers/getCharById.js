@@ -1,7 +1,7 @@
 const axios = require('axios')
 
 const getCharById = (res, id) => {
-    axios(`https://rickandmortyapi.com/api/character/:${id}`)
+    axios(`https://rickandmortyapi.com/api/character/${id}`)
         .then(result => result.data)
         .then(data => {
            let character = {
@@ -20,4 +20,4 @@ const getCharById = (res, id) => {
             )
 };
 
-module.exports = {getCharById};
+module.exports = { getCharById };
