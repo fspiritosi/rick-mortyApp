@@ -17,7 +17,7 @@ app.use(bodyParser.json({ limit: "50mb" }));
 
 //routes
 
-app.get("//rickandmorty/character/:{id}", async (req, res)=> {
+app.get("//rickandmorty/character/:id", async (req, res)=> {
      
     const id = req.params
 
